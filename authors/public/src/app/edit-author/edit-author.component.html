@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-w+yWASP3zYNxxvwoQBD5fUSc1tctKq4KUiZzxgkBSJACiUp+IbweVKvsEhMI+gz7" crossorigin="anonymous">
+<div class="container">
+  <h3>Edit {{editA.name}}</h3>
+
+  <form (submit) = "updateA()" class="row" >
+    <label>Author Name:</label>
+    <input type="text" name="newName" [(ngModel)]="editA.name"/>
+    <button type="submit">Update Author!</button>
+  </form>
+  <button><a [routerLink]="['/allAuthors']">Cancel</a></button>
+</div>
